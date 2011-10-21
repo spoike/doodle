@@ -13,11 +13,11 @@ class JoinServerAction extends AbstractAction
 	private static final long serialVersionUID = 2213023343666797498L;
 
 	private ErrorObserver parent;
-	
+
 	private JTextComponent hostNameField;
 
 	private JTextComponent portField;
-	
+
 	public JoinServerAction(ErrorObserver parent, JTextComponent hostNameField, JTextComponent portField) {
 		this.hostNameField = hostNameField;
 		this.portField = portField;
