@@ -3,11 +3,11 @@ package net;
 import java.awt.Point;
 
 public class DoodleEvent {
-	
+
 	private Point point;
-	
+
 	private boolean newPath;
-	
+
 	private double pressure;
 
 	public DoodleEvent(Point point, boolean newPath, double pressure) {
@@ -15,22 +15,22 @@ public class DoodleEvent {
 		this.newPath = newPath;
 		this.pressure = pressure;
 	}
-	
+
 	public DoodleEvent(Point point, boolean newPath)
 	{
 		this(point, newPath, 1.0);
 	}
-	
+
 	public DoodleEvent(Point point)
 	{
 		this(point, false, 1.0);
 	}
-	
+
 	/**
-	 * Builds a doodle event from a toString representation 
+	 * Builds a doodle event from a toString representation
 	 * of another.
-	 * 
-	 * @param doodleString The toString representation of a 
+	 *
+	 * @param doodleString The toString representation of a
 	 * {@link DoodleEvent}.
 	 */
 	public DoodleEvent(String doodleString)
@@ -41,7 +41,7 @@ public class DoodleEvent {
 		newPath = doodleData[2].equals("1");
 		pressure = Double.parseDouble(doodleData[3]);
 	}
-	
+
 	/**
 	 * @return The two dimensional point for the doodle event
 	 */
@@ -49,7 +49,7 @@ public class DoodleEvent {
 	{
 		return point;
 	}
-	
+
 	/**
 	 * @return True if the event the start of a new path
 	 */
@@ -57,16 +57,16 @@ public class DoodleEvent {
 	{
 		return newPath;
 	}
-	
+
 	/**
-	 * @return The pressure of the doodle at the given point. 
+	 * @return The pressure of the doodle at the given point.
 	 * Is a decimal in the interval 0..1
 	 */
 	public double getPressure()
 	{
 		return pressure;
 	}
-	
+
 	@Override
 	public String toString() {
 		StringBuffer str = new StringBuffer(10);
@@ -85,5 +85,5 @@ public class DoodleEvent {
 		str.append(pressure);
 		return str.toString();
 	}
-	
+
 }

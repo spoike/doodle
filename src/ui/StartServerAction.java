@@ -13,7 +13,7 @@ class StartServerAction extends AbstractAction
 	private static final long serialVersionUID = 1785179074849552469L;
 
 	private Component parent;
-	
+
 	private JTextComponent portField;
 
 	private JTextComponent widthField;
@@ -21,7 +21,7 @@ class StartServerAction extends AbstractAction
 	private JTextComponent heightField;
 
 	private JTextField clientField;
-	
+
 	public StartServerAction(SettingsPane parent, JTextField portField, JTextField widthField, JTextField heightField, JTextField clientField) {
 		this.portField = portField;
 		this.parent = parent;
@@ -43,5 +43,5 @@ class StartServerAction extends AbstractAction
 			ex.printStackTrace();
 			parent.setVisible(true);
 		}
-	}	
+	}
 }

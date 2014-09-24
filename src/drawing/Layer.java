@@ -11,17 +11,17 @@ public class Layer {
 	public Layer(BufferedImage image) {
 		this.image = image;
 	}
-		
+
 	public void draw(Graphics2D g2d, Rectangle r)
 	{
-		g2d.drawImage(image, 
-				r.x, r.y, 
-				r.width + r.x, r.height + r.y, 
+		g2d.drawImage(image,
+				r.x, r.y,
+				r.width + r.x, r.height + r.y,
 				r.x, r.y,
 				r.width + r.x, r.height + r.y,
 				null);
 	}
-	
+
 	public Graphics2D getGraphics() {
 		return image.createGraphics();
 	}

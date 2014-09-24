@@ -12,7 +12,7 @@ public class ClientReceiver extends Thread {
 
 	private DoodleObserver observer;
 	private BufferedReader reader;
-	
+
 	public ClientReceiver(Socket clientSocket, DoodleObserver observer) throws IOException {
 		reader = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
 		this.observer = observer;
@@ -30,5 +30,5 @@ public class ClientReceiver extends Thread {
 		} catch (NullPointerException e) {
 		}
 	}
-	
+
 }
